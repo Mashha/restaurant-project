@@ -3,31 +3,57 @@ import "./styles/style.css"
 import heroImage from "./images/hero-image.png"
 import logo from "./images/Logo.png"
 
-
+const homePage = (function(){   
 const mainContainer = document.getElementById("container")
 
+//hero image
 const heroImg = document.createElement("img")
 heroImg.src = heroImage
-// left container
-const containerLeft = document.createElement("div")
-containerLeft.classList.add("container-left")
 
-//logo
-const logoDiv = document.createElement("div")
-logoDiv.classList.add("logo-div")
+//navbar with logo and links
+const navBar = document.createElement("nav")
+const navBarInner = document.createElement("div")
+navBar.appendChild(navBarInner)
+navBar.classList.add("nav-bar")
+navBarInner.classList.add("nav-bar-inner")
+
 const logoImage = document.createElement("img")
 logoImage.src = logo
-logoDiv.appendChild(logoImage)
+logoImage.id = "logo"
+
+const ulItems = document.createElement("ul")
+ulItems.classList.add("ul-items")
+
+const listElementAbout = document.createElement("li")
+const aboutLink = document.createElement("a")
+aboutLink.classList.add("links")
+aboutLink.href = "#"
+aboutLink.textContent = "About"
+listElementAbout.appendChild(aboutLink)
+
+const listElementMenu = document.createElement("li")
+const menuLink = document.createElement("a")
+menuLink.classList.add("links")
+menuLink.href = "#"
+menuLink.textContent = "Menu"
+listElementMenu.appendChild(menuLink)
+
+const listElementContact = document.createElement("li")
+const contactLink = document.createElement("a")
+contactLink.classList.add("links")
+contactLink.href = "#"
+contactLink.textContent = "Contact"
+listElementContact.appendChild(contactLink)
+
+
+ulItems.append(listElementMenu, listElementAbout, listElementContact)
+
+navBarInner.append(logoImage, ulItems)
+
 //content
 const mainContent = document.createElement("div")
 mainContent.classList.add("content")
 
-//footer
-const footer = document.createElement("footer")
-footer.classList.add("footer")
-const footerPara = document.createElement("p")
-footerPara.textContent = "Build and designed by Pimu"
-footer.appendChild(footerPara)
 
 // create title, para and button for main content
 const title = document.createElement("h1")
@@ -40,6 +66,15 @@ const menuButton = document.createElement("button")
 menuButton.textContent = "Check our menu"
 menuButton.classList.add("menu-btn")
 
+//footer
+const footer = document.createElement("footer")
+footer.classList.add("footer")
+const footerPara = document.createElement("p")
+footerPara.textContent = "Build and designed by Pimu"
+footer.appendChild(footerPara)
+
 mainContent.append(title, paragraph, menuButton)
-containerLeft.append(logoDiv, mainContent, footer)
-mainContainer.appendChild(containerLeft)
+
+mainContainer.append(navBar, mainContent, footer)
+
+})()
