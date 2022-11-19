@@ -33,7 +33,7 @@ export default function homePage() {
     const listElementAbout = document.createElement("li");
     const aboutLink = document.createElement("a");
     aboutLink.classList.add("links");
-    aboutLink.href = "#";
+    aboutLink.href = "./about.js";
     aboutLink.textContent = "About";
     listElementAbout.appendChild(aboutLink);
 
@@ -59,7 +59,7 @@ export default function homePage() {
     );
 
     navBarInner.append(logoImage, ulItems);
-
+    
     //content
     const mainContent = document.createElement("div");
     mainContent.classList.add("content");
@@ -86,4 +86,7 @@ export default function homePage() {
     mainContent.append(title, paragraph, menuButton);
     mainContainer.append(navBar, mainContent, footer);
     
+
     }
+
+    
