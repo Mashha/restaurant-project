@@ -1,80 +1,13 @@
-//import someText from "./about"
-import "./styles/style.css"
-import heroImage from "./images/hero-image.png"
-import logo from "./images/Logo.png"
-
-const homePage = (function(){   
-const mainContainer = document.getElementById("container")
-
-//hero image
-const heroImg = document.createElement("img")
-heroImg.src = heroImage
-
-//navbar with logo and links
-const navBar = document.createElement("nav")
-const navBarInner = document.createElement("div")
-navBar.appendChild(navBarInner)
-navBar.classList.add("nav-bar")
-navBarInner.classList.add("nav-bar-inner")
-
-const logoImage = document.createElement("img")
-logoImage.src = logo
-logoImage.id = "logo"
-
-const ulItems = document.createElement("ul")
-ulItems.classList.add("ul-items")
-
-const listElementAbout = document.createElement("li")
-const aboutLink = document.createElement("a")
-aboutLink.classList.add("links")
-aboutLink.href = "#"
-aboutLink.textContent = "About"
-listElementAbout.appendChild(aboutLink)
-
-const listElementMenu = document.createElement("li")
-const menuLink = document.createElement("a")
-menuLink.classList.add("links")
-menuLink.href = "#"
-menuLink.textContent = "Menu"
-listElementMenu.appendChild(menuLink)
-
-const listElementContact = document.createElement("li")
-const contactLink = document.createElement("a")
-contactLink.classList.add("links")
-contactLink.href = "#"
-contactLink.textContent = "Contact"
-listElementContact.appendChild(contactLink)
+import homePage from "./home.js"
 
 
-ulItems.append(listElementMenu, listElementAbout, listElementContact)
-
-navBarInner.append(logoImage, ulItems)
-
-//content
-const mainContent = document.createElement("div")
-mainContent.classList.add("content")
-
-
-// create title, para and button for main content
-const title = document.createElement("h1")
-title.textContent = "Coffee and desserts, a place of comfort"
-title.classList.add("main-title")
-const paragraph = document.createElement("p")
-paragraph.textContent = "The best place in town to satisfy your sweet tooth and have a coffee break"
-paragraph.classList.add("para")
-const menuButton = document.createElement("button")
-menuButton.textContent = "Check our menu"
-menuButton.classList.add("menu-btn")
-
-//footer
-const footer = document.createElement("footer")
-footer.classList.add("footer")
-const footerPara = document.createElement("p")
-footerPara.textContent = "Build and designed by Pimu"
-footer.appendChild(footerPara)
-
-mainContent.append(title, paragraph, menuButton)
-
-mainContainer.append(navBar, mainContent, footer)
-
-})()
+let tabLinks = document.querySelectorAll(".links")
+    tabLinks.forEach(function(link){
+        link.addEventListener("click", function(){
+          if(this.textContent === "Home"){
+            homePage()
+           // window.open(this.href, "_self")
+          }
+          
+        })
+    })
