@@ -2,8 +2,7 @@ import heroImage from "./images/hero-image.png";
 import logo from "./images/Logo.png";
 import "./styles/style.css";
 
-export default (() => {
-  const homePage = () => {
+export default function homePage() {
     const mainContainer = document.getElementById("container");
 
     //hero image
@@ -34,7 +33,7 @@ export default (() => {
     const listElementAbout = document.createElement("li");
     const aboutLink = document.createElement("a");
     aboutLink.classList.add("links");
-    aboutLink.href = "./about.js";
+    aboutLink.href = "#";
     aboutLink.textContent = "About";
     listElementAbout.appendChild(aboutLink);
 
@@ -86,7 +85,5 @@ export default (() => {
 
     mainContent.append(title, paragraph, menuButton);
     mainContainer.append(navBar, mainContent, footer);
-  };
-  homePage();
-  return homePage;
-})();
+    
+    }
