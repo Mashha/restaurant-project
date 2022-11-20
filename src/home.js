@@ -20,45 +20,41 @@ export default function homePage() {
     logoImage.src = logo;
     logoImage.id = "logo";
 
-    const ulItems = document.createElement("ul");
-    ulItems.classList.add("ul-items");
+    const navItems = document.createElement("div");
+    navItems.classList.add("items");
 
-    const listElementHome = document.createElement("li");
-    const homeLink = document.createElement("a");
+    const homeLink = document.createElement("button");
+    homeLink.type = "button"
     homeLink.classList.add("links");
-    homeLink.href = "./home.js";
+    homeLink.src = "./home.js";
     homeLink.textContent = "Home";
-    listElementHome.appendChild(homeLink);
 
-    const listElementAbout = document.createElement("li");
-    const aboutLink = document.createElement("a");
+    const aboutLink = document.createElement("button");
+    aboutLink.type = "button"
     aboutLink.classList.add("links");
-    aboutLink.href = "./about.js";
+    aboutLink.src = "./about.js";
     aboutLink.textContent = "About";
-    listElementAbout.appendChild(aboutLink);
 
-    const listElementMenu = document.createElement("li");
-    const menuLink = document.createElement("a");
+    const menuLink = document.createElement("button");
+    menuLink.type = "button"
     menuLink.classList.add("links");
-    menuLink.href = "#";
+    menuLink.src = "#";
     menuLink.textContent = "Menu";
-    listElementMenu.appendChild(menuLink);
 
-    const listElementContact = document.createElement("li");
-    const contactLink = document.createElement("a");
+    const contactLink = document.createElement("button");
+    contactLink.type = "button"
     contactLink.classList.add("links");
-    contactLink.href = "#";
+    contactLink.src = "#";
     contactLink.textContent = "Contact";
-    listElementContact.appendChild(contactLink);
 
-    ulItems.append(
-      listElementHome,
-      listElementMenu,
-      listElementAbout,
-      listElementContact
+    navItems.append(
+      homeLink,
+      aboutLink,
+      menuLink,
+      contactLink
     );
 
-    navBarInner.append(logoImage, ulItems);
+    navBarInner.append(logoImage, navItems);
     
     //content
     const mainContent = document.createElement("div");
