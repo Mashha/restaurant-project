@@ -1,4 +1,44 @@
-#container {
- background-color: black;
- 
+.content {
+  width: 95%;
+  margin: auto;
+  gap: 20px;
+}
+
+.about-title {
+  color: #D5A653;
+  grid-column: 1 /-1;
+  text-align: center;
+  margin: 10px 0;
+  font-family: "Alice", sans-serif;
+  font-size: 45px;
+  letter-spacing: 1px;
+}
+
+.left-container {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: 1 /2;
+  justify-content: center;
+}
+
+.left-container > * {
+  font-size: 29px;
+  font-family: "Nemo", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.right-container {
+  display: grid;
+  grid-column: 2/3;
+  place-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+span {
+  color: #a8450c;
 }

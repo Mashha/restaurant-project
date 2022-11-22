@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Alice";
+  src: url("../fonts/Filmotype_Alice.ttf");
+}
+@font-face {
+  font-family: "Nemo";
+  src: url("../fonts/Filmotype_Nemo.otf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #a8450c;
+  --title-color: #d5a653;
+  --color-white: white;
+  --letter-spacing: 1px;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/hero-image.png");
+  background-position: initial;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.nav-bar {
+  grid-column: 1 /-1;
+  padding-top: 5px;
+}
+
+.nav-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+}
+
+#logo {
+  width: 70px;
+}
+
+.items {
+  display: flex;
+  gap: 50px;
+}
+
+.links {
+  border: none;
+  background-color: transparent;
+  color: var(--color-white);
+  letter-spacing: var(--letter-spacing);
+  cursor: pointer;
+  font-family: "Nemo", sans-serif;
+  font-size: 22px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-inner {
+  grid-column: 1 / 2;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  margin-left: 40px;
+  grid-gap: 20px;
+}
+
+.main-title {
+  color: var(--color-white);
+  font-size: 80px;
+  font-family: "Alice", sans-serif;
+}
+
+.para {
+  color: var(--color-white);
+  font-size: 30px;
+  font-family: "Nemo", sans-serif;
+  letter-spacing: var(--letter-spacing);
+}
+
+.menu-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  font-family: "Nemo", sans-serif;
+  letter-spacing: var(--letter-spacing);
+  font-size: 20px;
+}
+
+.footer {
+  color: var(--color-white);
+  grid-column: 1 / -1;
+  grid-row: 3/4;
+  text-align: center;
+}

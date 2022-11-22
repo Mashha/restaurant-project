@@ -1,0 +1,50 @@
+.content {
+  color: white;
+}
+
+.contact-title {
+  color: #D5A653;
+  grid-column: 1 /-1;
+  text-align: center;
+  margin: 10px 0;
+  font-family: "Alice", sans-serif;
+  font-size: 45px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.address-div,
+.email-div,
+.phone-div {
+  display: flex;
+  gap: 20px;
+}
+
+.address-div span {
+  align-self: center;
+}
+
+.left-container-text {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: 1 /2;
+  justify-content: center;
+  align-items: baseline;
+  font-family: "Nemo", sans-serif;
+  font-size: 29px;
+  padding: 20px;
+}
+
+.left-container-text h2 {
+  font-size: 35px;
+  margin-left: 40px;
+  border-bottom: 1px solid white;
+  font-family: "Alice", sans-serif;
+}
+
+.right-container-map {
+  display: flex;
+  justify-content: center;
+}

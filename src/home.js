@@ -1,88 +1,90 @@
 import heroImage from "./images/hero-image.png";
 import logo from "./images/Logo.png";
-import "./styles/style.css";
+import "./styles/home.css";
 
-export default function homePage() {
-    const mainContainer = document.getElementById("container");
+const mainContainer = document.getElementById("container");
+//hero image
+const heroImg = document.createElement("img");
+heroImg.src = heroImage;
 
-    //hero image
-    const heroImg = document.createElement("img");
-    heroImg.src = heroImage;
+export function loadNav() {
+  //navbar with logo and links
+  const navBar = document.createElement("nav");
+  const navBarInner = document.createElement("div");
+  navBar.appendChild(navBarInner);
+  navBar.classList.add("nav-bar");
+  navBarInner.classList.add("nav-bar-inner");
 
-    //navbar with logo and links
-    const navBar = document.createElement("nav");
-    const navBarInner = document.createElement("div");
-    navBar.appendChild(navBarInner);
-    navBar.classList.add("nav-bar");
-    navBarInner.classList.add("nav-bar-inner");
+  const logoImage = document.createElement("img");
+  logoImage.src = logo;
+  logoImage.id = "logo";
 
-    const logoImage = document.createElement("img");
-    logoImage.src = logo;
-    logoImage.id = "logo";
+  const navItems = document.createElement("div");
+  navItems.classList.add("items");
 
-    const navItems = document.createElement("div");
-    navItems.classList.add("items");
+  const homeLink = document.createElement("button");
+  homeLink.type = "button";
+  homeLink.classList.add("links");
+  homeLink.src = "./home.js";
+  homeLink.textContent = "Home";
 
-    const homeLink = document.createElement("button");
-    homeLink.type = "button"
-    homeLink.classList.add("links");
-    homeLink.src = "./home.js";
-    homeLink.textContent = "Home";
+  const aboutLink = document.createElement("button");
+  aboutLink.type = "button";
+  aboutLink.classList.add("links");
+  aboutLink.src = "./about.js";
+  aboutLink.textContent = "About";
 
-    const aboutLink = document.createElement("button");
-    aboutLink.type = "button"
-    aboutLink.classList.add("links");
-    aboutLink.src = "./about.js";
-    aboutLink.textContent = "About";
+  const menuLink = document.createElement("button");
+  menuLink.type = "button";
+  menuLink.classList.add("links");
+  menuLink.src = "#";
+  menuLink.textContent = "Menu";
 
-    const menuLink = document.createElement("button");
-    menuLink.type = "button"
-    menuLink.classList.add("links");
-    menuLink.src = "#";
-    menuLink.textContent = "Menu";
+  const contactLink = document.createElement("button");
+  contactLink.type = "button";
+  contactLink.classList.add("links");
+  contactLink.src = "#";
+  contactLink.textContent = "Contact";
 
-    const contactLink = document.createElement("button");
-    contactLink.type = "button"
-    contactLink.classList.add("links");
-    contactLink.src = "#";
-    contactLink.textContent = "Contact";
+  navItems.append(homeLink, aboutLink, menuLink, contactLink);
 
-    navItems.append(
-      homeLink,
-      aboutLink,
-      menuLink,
-      contactLink
-    );
+  navBarInner.append(logoImage, navItems);
 
-    navBarInner.append(logoImage, navItems);
-    
-    //content
-    const mainContent = document.createElement("div");
-    mainContent.classList.add("content");
+  mainContainer.appendChild(navBar);
+}
 
-    // create title, para and button for main content
-    const title = document.createElement("h1");
-    title.textContent = "Coffee and desserts, a place of comfort";
-    title.classList.add("main-title");
-    const paragraph = document.createElement("p");
-    paragraph.textContent =
-      "The best place in town to satisfy your sweet tooth and have a coffee break";
-    paragraph.classList.add("para");
-    const menuButton = document.createElement("button");
-    menuButton.textContent = "Check our menu";
-    menuButton.classList.add("menu-btn");
+export function loadMain() {
+  //content
+  const mainContent = document.createElement("div");
+  mainContent.classList.add("content");
 
-    //footer
-    const footer = document.createElement("footer");
-    footer.classList.add("footer");
-    const footerPara = document.createElement("p");
-    footerPara.textContent = "Build and designed by Pimu";
-    footer.appendChild(footerPara);
+  const mainContentInner = document.createElement("div");
+  mainContentInner.classList.add("content-inner");
 
-    mainContent.append(title, paragraph, menuButton);
-    mainContainer.append(navBar, mainContent, footer);
-    
+  // create title, para and button for main content
+  const title = document.createElement("h1");
+  title.textContent = "Coffee and desserts, a place of comfort";
+  title.classList.add("main-title");
+  const paragraph = document.createElement("p");
+  paragraph.textContent =
+    "The best place in town to satisfy your sweet tooth and have a coffee break";
+  paragraph.classList.add("para");
+  const menuButton = document.createElement("button");
+  menuButton.textContent = "Check our menu";
+  menuButton.classList.add("menu-btn");
 
-    }
+  mainContentInner.append(title, paragraph, menuButton);
+  mainContent.appendChild(mainContentInner);
+  mainContainer.appendChild(mainContent);
+}
 
-    
+//footer
+export function loadFooter() {
+  const footer = document.createElement("footer");
+  footer.classList.add("footer");
+  const footerPara = document.createElement("p");
+  footerPara.textContent = "Build and designed by Pimu";
+  footer.appendChild(footerPara);
+
+  mainContainer.appendChild(footer);
+}
