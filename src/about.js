@@ -4,9 +4,12 @@ import aboutUs from "./images/about-us.jpg";
 export function aboutPage() {
   const mainContentAbout = document.querySelector(".content");
 
-  const aboutTitle = document.createElement("h1")
-  aboutTitle.classList.add("about-title")
-  aboutTitle.textContent = "About Us"
+  const mainContentAboutInner = document.createElement("div");
+  mainContentAboutInner.classList.add("about-inner");
+
+  const aboutTitle = document.createElement("h1");
+  aboutTitle.classList.add("about-title");
+  aboutTitle.textContent = "About Us";
 
   // left side - text
   const leftContainer = document.createElement("div");
@@ -30,5 +33,6 @@ export function aboutPage() {
   aboutImage.src = aboutUs;
   rightContainer.appendChild(aboutImage);
 
-  mainContentAbout.append(aboutTitle, leftContainer, rightContainer);
+  mainContentAboutInner.append(aboutTitle, leftContainer, rightContainer);
+  mainContentAbout.appendChild(mainContentAboutInner);
 }

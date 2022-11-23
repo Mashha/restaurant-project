@@ -1,10 +1,12 @@
 import heroImage from "./images/hero-image.png";
 import logo from "./images/Logo.png";
 import "./styles/home.css";
+//import menuPdf from "./images/pdf/menu.pdf"
 
 const mainContainer = document.getElementById("container");
 //hero image
 const heroImg = document.createElement("img");
+heroImg.classList.add("hero-image");
 heroImg.src = heroImage;
 
 export function loadNav() {
@@ -37,13 +39,13 @@ export function loadNav() {
   const menuLink = document.createElement("button");
   menuLink.type = "button";
   menuLink.classList.add("links");
-  menuLink.src = "#";
+  menuLink.src = "./menu.js";
   menuLink.textContent = "Menu";
 
   const contactLink = document.createElement("button");
   contactLink.type = "button";
   contactLink.classList.add("links");
-  contactLink.src = "#";
+  contactLink.src = "./contact.js";
   contactLink.textContent = "Contact";
 
   navItems.append(homeLink, aboutLink, menuLink, contactLink);
@@ -53,10 +55,11 @@ export function loadNav() {
   mainContainer.appendChild(navBar);
 }
 
+const mainContent = document.createElement("div");
+mainContent.classList.add("content");
+
 export function loadMain() {
   //content
-  const mainContent = document.createElement("div");
-  mainContent.classList.add("content");
 
   const mainContentInner = document.createElement("div");
   mainContentInner.classList.add("content-inner");
@@ -69,8 +72,10 @@ export function loadMain() {
   paragraph.textContent =
     "The best place in town to satisfy your sweet tooth and have a coffee break";
   paragraph.classList.add("para");
-  const menuButton = document.createElement("button");
+  const menuButton = document.createElement("a");
   menuButton.textContent = "Check our menu";
+  menuButton.href = `${logo}`;
+  menuButton.setAttribute("target", "_blank");
   menuButton.classList.add("menu-btn");
 
   mainContentInner.append(title, paragraph, menuButton);

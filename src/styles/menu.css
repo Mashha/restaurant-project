@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto 1fr;
-  height: calc(100vh - 93.76px);
 }
 
 .menu-title {
@@ -14,6 +13,7 @@
   color: var(--title-color);
   letter-spacing: 1px;
   margin: 10px 0;
+  border-bottom: 1px solid rgba(124, 124, 124, 0.35);
 }
 
 .titles {
@@ -22,7 +22,7 @@
   font-family: "Alice", sans-serif;
   letter-spacing: 1px;
   color: var(--title-color);
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .coffee-list,
@@ -39,16 +39,92 @@
 }
 
 .left-div {
-  display: flex;
-  flex-direction: column;
-}
-.middle-div {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
 }
+.middle-div {
+  display: grid;
+  justify-content: center;
+  align-self: center;
+}
 .right-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+  display: grid;
+  justify-content: center;
+}
+
+.coffee-img {
+  width: 350px;
+}
+
+.breakfast-img {
+  width: 350px;
+}
+
+.dessert-img {
+  width: 300px;
+  justify-self: center;
+}
+
+@media (max-width: 1056px) {
+  .menu-inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+  }
+  .right-div {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+@media (max-width: 790px) {
+  .menu-inner {
+    grid-template-columns: 1fr;
+  }
+  .coffee-list,
+  .breakfast-list,
+  .dessert-list {
+    font-size: 20px;
+  }
+  .left-div,
+  .middle-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+@media (max-width: 590px) {
+  .content {
+    width: 100%;
+  }
+  .coffee-img,
+  .breakfast-img {
+    width: 250px;
+  }
+  .dessert-img {
+    width: 200px;
+  }
+}
+@media (max-width: 458px) {
+  .coffee-img,
+  .breakfast-img {
+    width: 150px;
+    justify-self: center;
+  }
+  .dessert-img {
+    width: 100px;
+    justify-self: center;
+  }
+
+  .menu-inner {
+    width: 100%;
+  }
+  .titles {
+    font-size: 30px;
+  }
+  .coffee-list,
+  .breakfast-list,
+  .dessert-list {
+    font-size: 18px;
+  }
 }

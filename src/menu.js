@@ -1,4 +1,8 @@
 import "./styles/menu.css";
+import image1 from "./images/img1.png";
+import image2 from "./images/img2.png";
+import image3 from "./images/img3.png";
+
 
 export function loadMenu() {
   const menuContent = document.querySelector(".content");
@@ -17,6 +21,10 @@ export function loadMenu() {
   const leftDivTitle = document.createElement("h3");
   leftDivTitle.classList.add("titles");
   leftDivTitle.textContent = "Coffee";
+
+  const leftDivImage = document.createElement("img");
+  leftDivImage.classList.add("coffee-img");
+  leftDivImage.src = image2;
 
   const coffeeList = document.createElement("ul");
   coffeeList.classList.add("coffee-list");
@@ -49,7 +57,7 @@ export function loadMenu() {
   );
 
   leftDivInner.append(leftDivTitle, coffeeList);
-  leftDiv.appendChild(leftDivInner);
+  leftDiv.append(leftDivInner, leftDivImage);
 
   // middle div
   const middleDiv = document.createElement("div");
@@ -58,6 +66,11 @@ export function loadMenu() {
   const middleDivTitle = document.createElement("h3");
   middleDivTitle.classList.add("titles");
   middleDivTitle.textContent = "Breakfast";
+
+  
+  const middleDivImageTop = document.createElement("img");
+  middleDivImageTop.classList.add("breakfast-img");
+  middleDivImageTop.src = image1;
 
   const breakfastList = document.createElement("ul");
   breakfastList.classList.add("breakfast-list");
@@ -89,7 +102,7 @@ export function loadMenu() {
     fruit
   );
   middleDivInner.append(middleDivTitle, breakfastList);
-  middleDiv.appendChild(middleDivInner);
+  middleDiv.append(middleDivImageTop, middleDivInner);
 
   // right div
   const rightDiv = document.createElement("div");
@@ -98,6 +111,10 @@ export function loadMenu() {
   const rightDivTitle = document.createElement("h3");
   rightDivTitle.classList.add("titles");
   rightDivTitle.textContent = "Desserts";
+
+  const rightDivImage = document.createElement("img");
+  rightDivImage.classList.add("dessert-img");
+  rightDivImage.src = image3;
 
   const dessertsList = document.createElement("ul");
   dessertsList.classList.add("breakfast-list");
@@ -129,7 +146,7 @@ export function loadMenu() {
     cobbler
   );
   rightDivInner.append(rightDivTitle, dessertsList);
-  rightDiv.appendChild(rightDivInner);
+  rightDiv.append(rightDivInner, rightDivImage);
   //append to inner container and main
   menuContentInner.append(menuTitle, leftDiv, middleDiv, rightDiv);
   menuContent.append(menuContentInner);

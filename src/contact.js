@@ -3,9 +3,9 @@ import "./styles/contact.css";
 export function loadContact() {
   const mainContent = document.querySelector(".content");
 
-  const contactTitle = document.createElement("h1")
-  contactTitle.classList.add("contact-title")
-  contactTitle.textContent = "Contact"
+  const contactTitle = document.createElement("h1");
+  contactTitle.classList.add("contact-title");
+  contactTitle.textContent = "Contact";
 
   // contact of the shop
   const leftContainer = document.createElement("div");
@@ -43,10 +43,8 @@ export function loadContact() {
   // map
   const rightContainer = document.createElement("div");
   rightContainer.classList.add("right-container-map");
-  const map = document.createElement("div");
-  map.innerHTML =
-    '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d44379.97419538687!2d13.648013!3d45.95631000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477b02437a4c8227%3A0x400f81c823fefd0!2sNova%20Gorica!5e0!3m2!1sen!2ssi!4v1669040692452!5m2!1sen!2ssi" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+  rightContainer.innerHTML =
+    '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.3403782205978!2d25.739988316422053!3d62.239889682770134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4685741787ac6a35%3A0x7e013f9e041e7ead!2sKauppakatu%2014%2C%2040100%20Jyv%C3%A4skyl%C3%A4%2C%20Finland!5e0!3m2!1sen!2ssi!4v1669126932035!5m2!1sen!2ssi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
 
-  rightContainer.appendChild(map);
   mainContent.append(contactTitle, leftContainer, rightContainer);
 }
