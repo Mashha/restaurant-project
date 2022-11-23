@@ -2,6 +2,7 @@ import { loadNav, loadMain, loadFooter } from "./home.js";
 import { aboutPage } from "./about.js";
 import { loadContact } from "./contact.js";
 import { loadMenu } from "./menu.js";
+import pdf from "./images/pdf/menu.pdf"
 
 loadNav();
 loadMain();
@@ -45,5 +46,5 @@ const menuBtn = document.querySelector(".menu-btn");
 menuBtn.addEventListener("click", takeMeToMenu);
 
 function takeMeToMenu() {
-  window.open("./images/pdf/menu.pdf");
+  window.open(pdf);
 }
