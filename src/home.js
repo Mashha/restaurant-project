@@ -1,7 +1,8 @@
 import heroImage from "./images/hero-image.png";
 import logo from "./images/Logo.png";
 import "./styles/home.css";
-//import menuPdf from "./images/pdf/menu.pdf"
+import menuPdf from "./images/pdf/menu.pdf"
+
 
 const mainContainer = document.getElementById("container");
 //hero image
@@ -74,7 +75,7 @@ export function loadMain() {
   paragraph.classList.add("para");
   const menuButton = document.createElement("a");
   menuButton.textContent = "Check our menu";
-  menuButton.href = `${logo}`;
+  menuButton.href = `${menuPdf}`;
   menuButton.setAttribute("target", "_blank");
   menuButton.classList.add("menu-btn");
 

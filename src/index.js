@@ -45,5 +45,5 @@ const menuBtn = document.querySelector(".menu-btn");
 menuBtn.addEventListener("click", takeMeToMenu);
 
 function takeMeToMenu() {
-  window.open("./images/Logo.png");
+  window.open("./images/pdf/menu.pdf");
 }
