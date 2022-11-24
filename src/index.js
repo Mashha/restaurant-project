@@ -3,7 +3,7 @@ import { aboutPage } from "./about.js";
 import { loadContact } from "./contact.js";
 import { loadMenu } from "./menu.js";
 import menuPdf from "./images/pdf/menu.pdf";
-import "./styles/style.css"
+import "./styles/style.css";
 
 loadNav();
 loadMain();
@@ -58,6 +58,14 @@ const navSlide = () => {
     nav.classList.toggle("active");
     // close
     burgerMenu.classList.toggle("toggle");
+  });
+  // close nav when user clicks on a button
+  const navLinksInMobile = document.querySelectorAll(".items");
+  navLinksInMobile.forEach(function (item) {
+    item.addEventListener("click", function () {
+      nav.classList.toggle("active");
+      burgerMenu.classList.remove("toggle");
+    });
   });
 };
 navSlide();

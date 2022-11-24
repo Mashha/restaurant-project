@@ -215,6 +215,7 @@ body {
     align-items: center;
     text-align: center;
   }
+  
   .footer {
     justify-content: center;
   }
@@ -222,10 +223,11 @@ body {
   body {
     overflow-x: hidden;
   }
+
   .items {
     position: absolute;
     right: 0px;
-    height: 90vh;
+    height: 50vh;
     top: 10vh;
     background-color: var(--primary-color);
     display: flex;
@@ -238,8 +240,6 @@ body {
   .mobile-icon {
     display: block;
   }
-}
-@media (max-width: 420px) {
   .home-hero {
     background-image: url("../images/mobile.png");
   }
