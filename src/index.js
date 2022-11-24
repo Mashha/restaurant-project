@@ -3,6 +3,7 @@ import { aboutPage } from "./about.js";
 import { loadContact } from "./contact.js";
 import { loadMenu } from "./menu.js";
 import menuPdf from "./images/pdf/menu.pdf";
+import "./styles/style.css"
 
 loadNav();
 loadMain();
