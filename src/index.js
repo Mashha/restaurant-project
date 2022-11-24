@@ -2,7 +2,7 @@ import { loadNav, loadMain, loadFooter } from "./home.js";
 import { aboutPage } from "./about.js";
 import { loadContact } from "./contact.js";
 import { loadMenu } from "./menu.js";
-import pdf from "./images/pdf/menu.pdf"
+import menuPdf from "./images/pdf/menu.pdf";
 
 loadNav();
 loadMain();
@@ -46,5 +46,17 @@ const menuBtn = document.querySelector(".menu-btn");
 menuBtn.addEventListener("click", takeMeToMenu);
 
 function takeMeToMenu() {
-  window.open(pdf);
+  window.open(menuPdf);
 }
+
+const navSlide = () => {
+  const burgerMenu = document.querySelector(".mobile-icon");
+  const nav = document.querySelector(".items");
+
+  burgerMenu.addEventListener("click", function () {
+    nav.classList.toggle("active");
+    // close
+    burgerMenu.classList.toggle("toggle");
+  });
+};
+navSlide();

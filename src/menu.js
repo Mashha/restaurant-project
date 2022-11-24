@@ -3,7 +3,6 @@ import image1 from "./images/img1.png";
 import image2 from "./images/img2.png";
 import image3 from "./images/img3.png";
 
-
 export function loadMenu() {
   const menuContent = document.querySelector(".content");
 
@@ -67,7 +66,6 @@ export function loadMenu() {
   middleDivTitle.classList.add("titles");
   middleDivTitle.textContent = "Breakfast";
 
-  
   const middleDivImageTop = document.createElement("img");
   middleDivImageTop.classList.add("breakfast-img");
   middleDivImageTop.src = image1;

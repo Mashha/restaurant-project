@@ -1,8 +1,7 @@
 import heroImage from "./images/hero-image.png";
 import logo from "./images/Logo.png";
 import "./styles/home.css";
-import menuPdf from "./images/pdf/menu.pdf"
-
+import menuPdf from "./images/pdf/menu.pdf";
 
 const mainContainer = document.getElementById("container");
 //hero image
@@ -49,9 +48,20 @@ export function loadNav() {
   contactLink.src = "./contact.js";
   contactLink.textContent = "Contact";
 
+  // mobile nav
+  const mobileNav = document.createElement("div");
+  mobileNav.classList.add("mobile-icon");
+  const bar1 = document.createElement("div");
+  bar1.classList.add("bar-one");
+  const bar2 = document.createElement("div");
+  bar2.classList.add("bar-two");
+  const bar3 = document.createElement("div");
+  bar3.classList.add("bar-three");
+  mobileNav.append(bar1, bar2, bar3);
+
   navItems.append(homeLink, aboutLink, menuLink, contactLink);
 
-  navBarInner.append(logoImage, navItems);
+  navBarInner.append(logoImage, navItems, mobileNav);
 
   mainContainer.appendChild(navBar);
 }
@@ -89,8 +99,14 @@ export function loadFooter() {
   const footer = document.createElement("footer");
   footer.classList.add("footer");
   const footerPara = document.createElement("p");
-  footerPara.textContent = "Build and designed by Pimu";
-  footer.appendChild(footerPara);
+  footerPara.textContent = "Build and designed";
+  const name = document.createElement("a");
+  name.textContent = "Pimu";
+  name.href = "https://github.com/Mashha/restaurant-project";
+  const copyIcon = document.createElement("span");
+  copyIcon.innerHTML = '<i class="fa-regular fa-copyright"></i>';
+
+  footer.append(footerPara, copyIcon, name);
 
   mainContainer.appendChild(footer);
 }
