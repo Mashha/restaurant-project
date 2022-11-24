@@ -215,12 +215,13 @@ body {
     align-items: center;
     text-align: center;
   }
-  
+
   .footer {
     justify-content: center;
   }
 
   body {
+    position: fixed;
     overflow-x: hidden;
   }
 
