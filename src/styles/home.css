@@ -210,6 +210,10 @@ body {
   }
 }
 @media (max-width: 520px) {
+  #container {
+    min-height: 100vh;
+  }
+
   .content-inner {
     padding-bottom: 150px;
     align-items: center;

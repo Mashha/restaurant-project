@@ -63,6 +63,9 @@ iframe {
   .left-container-text {
     font-size: 22px;
   }
+  .left-container-text h2 {
+    font-size: 30px;
+  }
   .contact-title {
     margin: 0;
     font-size: 30px;
