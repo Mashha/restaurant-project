@@ -71,6 +71,7 @@ span {
 @media (max-width: 500px) {
   .left-container > * {
     text-align: center;
+    font-size: 20px;
   }
   .left-container {
     padding: 0 5px;
