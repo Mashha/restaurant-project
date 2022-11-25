@@ -72,4 +72,7 @@ span {
   .left-container > * {
     text-align: center;
   }
+  .left-container {
+    padding: 0 5px;
+  }
 }
