@@ -63,4 +63,7 @@ iframe {
   .left-container-text {
     font-size: 22px;
   }
+  .contact-title {
+    margin: 0;
+  }
 }

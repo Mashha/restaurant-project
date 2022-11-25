@@ -127,4 +127,8 @@
   .dessert-list {
     font-size: 18px;
   }
+
+  .menu-title {
+    margin: 0;
+  }
 }
