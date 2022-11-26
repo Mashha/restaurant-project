@@ -23,4 +23,7 @@ Skills i used:
 
 ## Source
 
-This project is a part of the odin project bootcamp where i got the »instructions« the logic of the implementation and the desgin are mine.
+This project is a part of the odin project bootcamp where i got the »instructions« the logic of the implementation and the design are mine.
+https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page
+
+live: https://mashha.github.io/restaurant-project/
