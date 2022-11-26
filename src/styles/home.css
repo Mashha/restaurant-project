@@ -236,7 +236,7 @@ body {
   .items {
     position: absolute;
     right: 0px;
-    height: 86vh;
+    height: 92vh;
     top: 0;
     background-color: var(--mobile-nav-bg);
     display: flex;
